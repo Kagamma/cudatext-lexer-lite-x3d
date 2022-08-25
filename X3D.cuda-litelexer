@@ -1,6 +1,6 @@
 {
   "about": "VRML/X3DV lexer by kagamma",
-  "files": "*.vrml;*.x3dv",
+  "files": "*.wrl;*.x3dv",
   "cmt_line": "#",
   "case_sens": true,
   "rules": {
