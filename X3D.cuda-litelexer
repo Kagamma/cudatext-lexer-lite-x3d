@@ -1,0 +1,52 @@
+{
+  "about": "VRML/X3DV lexer by kagamma",
+  "files": "*.vrml;*.x3dv",
+  "cmt_line": "#",
+  "case_sens": true,
+  "rules": {
+    "header": {
+      "regex": "\\#X3D .*",
+      "style": "IdKeyword"
+    },
+    "cmt": {
+      "regex": "\\#.*",
+      "style": "Comment"
+    },
+    "keyword": {
+      "regex": "\\b(DEF|USE|ROUTE|TO|PROTO|EXTERNPROTO|PROFILE|IS|META)\\b",
+      "style": "IdKeyword"
+    },
+    "const": {
+      "regex": "\\b(TRUE|FALSE|NULL)\\b",
+      "style": "Number"
+    },
+    "var": {
+      "regex": "\\b(appearance|field|geometry|initializeOnly|inputOutput|inputOnly|outputOnly|exposedField|SFBool|MFBool|SFColor|MFColor|SFColorRGBA|MFColorRGBA|SFDouble|MFDouble|SFFloat|MFFloat|SFImage|MFImage|SFInt32|MFInt32|SFMatrix3d|MFMatrix3d|SFMatrix3f|MFMatrix3f|SFMatrix4d|MFMatrix4d|SFMatrix4f|MFMatrix4f|SFNode|MFNode|SFRotation|MFRotation|SFString|MFString|SFTime|MFTime|SFVec2d|MFVec2d|SFVec2f|MFVec2f|SFVec3d|MFVec3d|SFVec3f|MFVec3f|SFVec4f|MFVec4f)\\b",
+      "style": "IdVar"
+    },
+    "number": {
+      "regex": "\\b[\\d\\.\\-]+\\b",
+      "style": "Number"
+    },
+    "class": {
+      "regex": "\\b([A-Za-z0-9_]+)(\\s+{|{)",
+      "style": "Symbol"
+    },
+    "kind": {
+      "regex": "\\b(Interchange|Full|Immersion|Interactive)\\b",
+      "style": "Id2"
+    },
+    "text": {
+      "regex": "\\b([A-Za-z0-9_]+)\\b",
+      "style": "Id"
+    },
+    "str": {
+      "regex": "\\\".*\"",
+      "style": "String"
+    },
+    "sym": {
+      "regex": "[\\{\\}\\[\\]:,]",
+      "style": "Symbol"
+    }
+  }
+}
